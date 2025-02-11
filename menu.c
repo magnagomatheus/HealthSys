@@ -59,11 +59,5 @@ void menu() {
     salvarInformacoesArquivo(pacientes);
 
     // Dando free na lista de pacientes após o usuário digitar Q para sair.
-    /*ListNode *p = pacientes->first;
-    while (p != NULL) {
-        ListNode *temp = p;
-        p = p->next;
-        free(temp);
-    }*/
-    free(pacientes);
+    liberar_memoria(pacientes);
 }

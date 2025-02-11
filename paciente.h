@@ -55,4 +55,7 @@ void imprimir_ListaPacientes(LinkedList *pacientes);
 // Salva todas as modificacoes e novos pacientes adicionados.
 void salvarInformacoesArquivo(LinkedList *pacientes);
 
+// Libera espaço de todos os nós e da própria lista de pacientes.
+void liberar_memoria(LinkedList *pacientes);
+
 #endif

@@ -537,3 +537,14 @@ void salvarInformacoesArquivo(LinkedList *pacientes) {
     // Indica que deu certo!
     printf("Informacoes foram salvas com sucesso!!!!\n");
 }
+
+// Libera espaço de todos os nós e da própria lista de pacientes.
+void liberar_memoria(LinkedList *pacientes) {
+    ListNode *p = pacientes->first;
+    while (p != NULL) {
+        ListNode *temp = p;
+        p = p->next;
+        free(temp);
+    }
+    free(pacientes);
+}
